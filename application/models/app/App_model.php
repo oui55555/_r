@@ -33,7 +33,8 @@
 					SELECT * 
 					FROM candidatos, empresa_candidatos 
 					WHERE ec_empresa = %s 
-					AND ec_candidato = user_event_id',
+					AND ec_candidato = user_event_id
+					AND NOT stats = 1',
 				$user_id);
 			if($query = $this->db->query($sql)){
 				return $query -> result();

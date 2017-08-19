@@ -42,7 +42,7 @@
 
     <div  class="col-sm-6">
     	<h3>Estado de candidato</h3>
-    	<h4><?= $x->stats ?></h4>
+    	<h4><? if($x->stats == 1){echo 'rechazado';}else if($x->stats == 2){echo 'Aprobado';} ?></h4>
     </div>
     <div  class="col-sm-6">
 	 <?= form_open('app_home/valid_user/candidato/'.$x->user_event_id, 'class="form_admin"');?>
